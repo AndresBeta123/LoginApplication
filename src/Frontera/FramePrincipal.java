@@ -13,7 +13,7 @@ import Entidad.Sistema;
  * @author Estudiante
  */
 public class FramePrincipal extends javax.swing.JFrame {
-    
+    public ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
     private Registro registro = new Registro();
     private Ingreso  ingreso = new Ingreso();
 
@@ -157,8 +157,7 @@ public class FramePrincipal extends javax.swing.JFrame {
     }
     
     public void inicializacion(){
-        ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
-        
+   
         Usuario a = new Usuario();
         Usuario b = new Usuario();
         Usuario c = new Usuario();
