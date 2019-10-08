@@ -33,7 +33,6 @@ public class Ingreso extends javax.swing.JPanel {
         nombreTF = new javax.swing.JTextField();
         contraseniaTF = new javax.swing.JTextField();
         aceptarB = new javax.swing.JButton();
-        Salida = new javax.swing.JLabel();
 
         jLabel1.setText("Nombre");
 
@@ -58,11 +57,8 @@ public class Ingreso extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(46, 46, 46)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Salida)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(aceptarB))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(aceptarB)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -85,10 +81,8 @@ public class Ingreso extends javax.swing.JPanel {
                     .addComponent(jLabel2)
                     .addComponent(contraseniaTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(aceptarB)
-                    .addComponent(Salida))
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addComponent(aceptarB)
+                .addContainerGap(19, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -107,12 +101,11 @@ public class Ingreso extends javax.swing.JPanel {
         System.out.println("-------------");
         String resultado = validar.VerificarLogin(usuario);
         System.out.println(resultado);
-        Salida.setText(resultado);
+        
     }//GEN-LAST:event_aceptarBActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Salida;
     private javax.swing.JButton aceptarB;
     private javax.swing.JTextField contraseniaTF;
     private javax.swing.JLabel jLabel1;

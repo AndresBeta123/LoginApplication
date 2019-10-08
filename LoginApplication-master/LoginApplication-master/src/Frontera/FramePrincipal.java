@@ -13,11 +13,11 @@ import Entidad.Sistema;
  * @author Estudiante
  */
 public class FramePrincipal extends javax.swing.JFrame {
-    public ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
+     
     private Registro registro = new Registro();
     private Ingreso  ingreso = new Ingreso();
-
     public static Sistema sistema = new Sistema();
+    public ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
   
     /**
      * Creates new form FramePrincipal
@@ -157,7 +157,7 @@ public class FramePrincipal extends javax.swing.JFrame {
     }
     
     public void inicializacion(){
-   
+        
         Usuario a = new Usuario();
         Usuario b = new Usuario();
         Usuario c = new Usuario();
@@ -169,11 +169,11 @@ public class FramePrincipal extends javax.swing.JFrame {
         c.setNombre("Maria");
         c.setPassword("12345");
         
-        usuarios.add(a);
-        usuarios.add(b);
-        usuarios.add(c);
+        sistema.add(a);
+        sistema.add(b);
+        sistema.add(c);
         
-        sistema.setUsuarios(usuarios);
+        
         
          for(Usuario u: sistema.getUsuarios()){
              System.out.println(u.getNombre());
