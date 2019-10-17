@@ -11,13 +11,21 @@ import Frontera.*;
  * @author Estudiante
  */
 public class ValidarRegistro {
-
+    public Sistema sistema = FramePrincipal.sistema;
     public ValidarRegistro() {
         
     }
     
     
     public String validarDatos(Usuario usuario,Usuario contraseñas){
+    int i;
+    
+    for(i=0;i<sistema.getUsuarios().size();i++){
+        if(sistema.getUsuarios().get(i).getNombre().equals(usuario.getNombre())){
+            return("Usuario Repetido");
+        }
+    }
+    
     if(!verificarLongitudNombre(usuario.getNombre())){
             return("Longitud nombre incorrecta");
         }
@@ -25,7 +33,7 @@ public class ValidarRegistro {
             return("Longitud contraseña incorrecta");
         }
     if(contraseñas.getNombre().equals(contraseñas.getPassword())){
-            return("Registro con existo");
+            return("Registro con exito");
     }  
     
     return ("Las contraseñas no coinciden");

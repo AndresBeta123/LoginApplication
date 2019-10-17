@@ -16,7 +16,6 @@ public class Sistema {
     private ArrayList <Usuario> usuarios;
 
     public Sistema() {
-        this.usuarios = new ArrayList<>();
     }
 
     public ArrayList<Usuario> getUsuarios() {
@@ -27,11 +26,6 @@ public class Sistema {
         this.usuarios = usuarios;
     }
     
-    public void add(Usuario usuario){
-        this.usuarios.add(usuario);
-    }
-    
-   
     
     
 }
